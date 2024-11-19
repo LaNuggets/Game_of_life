@@ -1,3 +1,2 @@
 #+TITLE: Game of Life
 #+AUTHOR: Tayvadi & Aurélien
-tt
