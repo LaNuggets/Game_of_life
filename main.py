@@ -8,7 +8,6 @@ def main():
     m.menu()
     grid = gd.generate_grid()
     while True:
-        dg.display_grid(grid)
         grid = cs.cell_state(grid)
         dg.display_grid(grid)
         au.ask_user()

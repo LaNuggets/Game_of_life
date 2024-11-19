@@ -20,7 +20,7 @@ def cell_state(grid):
             if live_cells == 3:
                 actual_grid[i][j] = 1
             elif live_cells == 2:
-                continue
+                actual_grid[i][j] = grid[i][j]
             else:
                 actual_grid[i][j] = 0
             live_cells = 0
