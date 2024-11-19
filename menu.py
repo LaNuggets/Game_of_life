@@ -1,5 +1,6 @@
 import os
 
+
 def menu():
     os.system('clear')
     print("Welcome to the Game of Life !\n")
