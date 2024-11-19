@@ -4,7 +4,7 @@ import display_grid as dg
 frame = [(-1, -1), (-1, 0), (-1, 1),(0, -1), (0, 1),(1, -1), (1, 0), (1, 1)]
 
 def cell_state(grid):
-    
+    actual_grid = [row[:] for row in grid]
     live_cells = 0
 
     for i, value in enumerate(grid):
@@ -18,14 +18,14 @@ def cell_state(grid):
                         live_cells += 1 
 
             if live_cells == 3:
-                grid[i][j] = 1
+                actual_grid[i][j] = 1
             elif live_cells == 2:
                 continue
             else:
-                grid[i][j] = 0
+                actual_grid[i][j] = 0
             live_cells = 0
 
-    return grid
+    return actual_grid
 
 grid =[[0, 0, 0, 0, 1, 1, 0, 1, 1, 0],
        [1, 1, 1, 1, 1, 0, 1, 0, 1, 0],
