@@ -2,9 +2,14 @@ import random
 import os 
 
 def generate_grid():
-    grid_size = input("Enter the grid size: ")
-    components = [0, 1]
 
+    grid_size = input("Enter the grid size: ")
+
+    while grid_size > '55' or grid_size < '3':
+        print("Please choose a number between 3 and 55")
+        grid_size = input("Enter the grid size: ")
+        
+    components = [0, 1]
     grid = [[random.choice(components) for _ in range(int(grid_size))] for _ in range(int(grid_size))]
 
     return grid

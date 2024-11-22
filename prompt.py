@@ -1,17 +1,26 @@
 import os
+import save as sv
+import grid as gd
 
 def menu():
     os.system('clear')
     print("Welcome to the Game of Life !\n")
-    print('This is an auto generate game base on your choices \n')
-    print('At any moment press\'q\' to exit')
-
-def ask_user():
+    print('This is an auto generate game base on your choices.')
+    user_response = input('Load the previous grid, y/n: ')
+    if user_response == 'y':
+        grid = sv.load_grid()
+        return grid
+    elif user_response == 'n':
+        grid = gd.generate_grid()
+        return grid
+   
+def ask_user(grid):
     while True:
-        user_responce = input('Press "Enter" to continue or "q" to exit: ')
-        if user_responce == "q":
+        user_response = input('Press "Enter" to continue or "q" to exit: ')
+        if user_response == "q":
+           sv.save_grid(grid)
            exit(0)
-        elif user_responce == "":
+        elif user_response == "":
            return
         else:
-            print('Wrong ky pressed. Please presse "Enter" or "q"')
+            print('Wrong key pressed. Please presse "Enter" or "q"')

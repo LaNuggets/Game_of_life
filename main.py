@@ -2,13 +2,11 @@ import grid as gd
 import prompt as pr
 import time
 
-
 def main():
     history = []
     count = 0
     is_cycle = False
-    pr.menu()
-    grid = gd.generate_grid()
+    grid = pr.menu()
     history.append(grid)
     
     while True:
@@ -19,6 +17,6 @@ def main():
         print(count)
         if is_cycle:
             print("cycle detected")
-        pr.ask_user()
+        pr.ask_user(grid)
 
 main()
