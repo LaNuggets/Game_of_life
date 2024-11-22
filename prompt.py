@@ -6,14 +6,17 @@ def menu():
     os.system('clear')
     print("Welcome to the Game of Life !\n")
     print('This is an auto generate game base on your choices.')
-    user_response = input('Load the previous grid, y/n: ')
-    if user_response == 'y':
-        grid = sv.load_grid()
-        return grid
-    elif user_response == 'n':
-        grid = gd.generate_grid()
-        return grid
-   
+    while True:
+        user_response = input('Load the previous grid, y/n: ')
+        if user_response == 'y':
+            grid = sv.load_grid()
+            return grid
+        elif user_response == 'n':
+            grid = gd.generate_grid()
+            return grid
+        else:
+            print('Wrong key pressed. Please press "y" or "n"')
+
 def ask_user(grid):
     while True:
         user_response = input('Press "Enter" to continue or "q" to exit: ')
@@ -23,4 +26,4 @@ def ask_user(grid):
         elif user_response == "":
            return
         else:
-            print('Wrong key pressed. Please presse "Enter" or "q"')
+            print('Wrong key pressed. Please press "Enter" or "q"')
