@@ -1,5 +1,23 @@
-import generate_grid as gd
-import display_grid as dg
+import random
+import os 
+
+def generate_grid():
+
+    grid_size = input("Enter the grid size: ")
+
+    while grid_size > '55' or grid_size < '3':
+        print("Please choose a number between 3 and 55")
+        grid_size = input("Enter the grid size: ")
+        
+    components = [0, 1]
+    grid = [[random.choice(components) for _ in range(int(grid_size))] for _ in range(int(grid_size))]
+
+    return grid
+
+def display_grid(grid):
+    os.system('clear')
+    for i in grid:
+        print(" ".join(str(j) for j in i))
 
 frame = [(-1, -1), (-1, 0), (-1, 1),(0, -1), (0, 1),(1, -1), (1, 0), (1, 1)]
 
@@ -26,3 +44,10 @@ def cell_state(grid):
             live_cells = 0
 
     return actual_grid
+
+def scan_history(grid, history, count):
+    count += 1
+    if count >= 2:
+        if grid in history:
+            return count, True
+    return count, False
