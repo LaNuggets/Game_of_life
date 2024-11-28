@@ -17,7 +17,8 @@ def generate_grid():
 def display_grid(grid):
     os.system('clear')
     for i in grid:
-        print(" ".join(str(j) for j in i))
+        replace_symbole = ['⬛' if x == 1 else '⬜' for x in i]
+        print(" ".join(replace_symbole))
 
 frame = [(-1, -1), (-1, 0), (-1, 1),(0, -1), (0, 1),(1, -1), (1, 0), (1, 1)]
 
