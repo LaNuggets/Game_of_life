@@ -1,2 +1,9 @@
 #+TITLE: Game of Life
 #+AUTHOR: Tayvadi & Aurélien
+
+
+* How to Lunch the project ?
+Go in the main folder "Game_of_life/" and execute the commande:
+#+BEGIN_SRC python
+python3 main.py
+#+END_SRC
