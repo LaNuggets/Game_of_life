@@ -1,5 +1,6 @@
 import random
 import os 
+import variables as v
 
 def generate_grid():
 
@@ -23,15 +24,13 @@ def display_grid(grid, living_cell_symbol='⬛', dead_cell_symbol='⬜'):
         replace_symbole = [living_cell_symbol if x == 1 else dead_cell_symbol for x in i]
         print(" ".join(replace_symbole))
 
-frame = [(-1, -1), (-1, 0), (-1, 1),(0, -1), (0, 1),(1, -1), (1, 0), (1, 1)]
-
 def cell_state(grid):
     actual_grid = [row[:] for row in grid]
     live_cells = 0
 
     for i, value in enumerate(grid):
         for j,_ in enumerate(value):
-            for x_frame, y_frame in frame:
+            for x_frame, y_frame in v.frame:
                 x_direction = i + x_frame
                 y_direction = j + y_frame
 
