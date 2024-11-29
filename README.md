@@ -4,8 +4,8 @@
 
 1. [Project Description](#project-description)
 2. [Requirements](#requirements)
-   - [1. Requirements]
-   - [2. Directory Structure] 
+   - 1. Requirements
+   - 2. Directory Structure
 3. [Run the Application](#6-run-the-application)
 
 ## Project Description 📝
