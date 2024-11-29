@@ -19,6 +19,8 @@ def menu():
         elif user_response == 'n':
             grid = gd.generate_grid()
             return grid
+        elif user_response == "q":
+           exit(0)
         else:
             print('\033[1;31mWrong key pressed. Please press "y" or "n"\033[0m')
 
