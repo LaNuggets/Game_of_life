@@ -1,2 +1,26 @@
 #+TITLE: Game of Life
 #+AUTHOR: Tayvadi & Aurélien
+
+* How to Lunch the project ?
+Go in the main folder "Game_of_life/" and execute the commande below.
+
+This one if you have python3
+#+BEGIN_SRC python
+python3 main.py
+#+END_SRC
+
+or this one if you have python
+
+#+BEGIN_SRC python
+python main.py
+#+END_SRC
+* What is this Project ?
+** Rules
+This is a simplified version of the "Game of life" by john Conway made in python.
+This version have 3 rules, which are :
+1. If a cell have exactly 3 living neighbors she became alive on the next turn.
+2. If a cell have exactly 2 living neighbors nothing happen (dead = dead, alive = alive) on the next turn.
+3. Otherwise the cell die on the next turn.
+** Addon
+This programme detects if the game is in a loop, if a certain pattern repeat indefinitely, and say it to the user.
+In this version of the game the last played game is saved and can be load a the start of the game based on the user choice.
