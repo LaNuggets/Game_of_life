@@ -18,5 +18,5 @@ def main():
             v.cycle_start, v.count, v.is_cycle = gd.scan_history(v.cycle_start, grid, v.history, v.count)
             v.history.append(grid)
     except:
-        print('\n\n\033[1;31mThe programme shutdown sudently\033[0m')
+        print('\n\n\033[1;31mThe programme shutdown !\033[0m')
 main()

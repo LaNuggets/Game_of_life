@@ -9,17 +9,17 @@ def menu():
 
     while True:
         user_response = input('\033[1;34mLoad the previous grid, y/n: \033[0m')
-        if user_response == 'y':
+        if user_response.lower() == 'y':
             try:
                 grid = sv.load_grid()
             except:
                 print("\033[1;31mThere is no game history! Starting a new game.\033[0m")
                 grid = gd.generate_grid()
             return grid
-        elif user_response == 'n':
+        elif user_response.lower() == 'n':
             grid = gd.generate_grid()
             return grid
-        elif user_response == "q":
+        elif user_response.lower() == "q":
            exit(0)
         else:
             print('\033[1;31mWrong key pressed. Please press "y" or "n"\033[0m')
@@ -27,7 +27,7 @@ def menu():
 def ask_user(grid):
     while True:
         user_response = input('\033[1;34mPress "Enter" to continue or "q" to exit: \033[0m')
-        if user_response == "q":
+        if user_response.lower() == "q":
            sv.save_grid(grid)
            exit(0)
         elif user_response == "":
