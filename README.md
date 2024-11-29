@@ -4,9 +4,9 @@
 
 1. [Project Description](#project-description)
 2. [Requirements](#requirements)
-   - [1. Requirements](#1-Python)
-   - [2. Directory Structure]
-   - [3. Run the Application](#6-run-the-application)
+   - [1. Requirements]
+   - [2. Directory Structure] 
+3. [Run the Application](#6-run-the-application)
 
 ## Project Description 📝
 Le jeu de la Vie de Conway est un « jeu à zéro joueur », puisqu'il ne nécessite aucune intervention du joueur lors de son déroulement. Le jeu se déroule sur une grille à deux dimensions comportant un nombre n * n de cellules. Chaque cellule est soit vivante, soit morte et possède 8 cellules voisines.
@@ -21,7 +21,8 @@ Pour passer au tour suivant, l’utilisateur doit appuyer sur Entrée, ou bien s
 Q ce qui aura pour effet de sauvegarder la grille et de fermer le programme 
 
 **Technologies used:**
-- Python 
+- Python3
+- Python
 
 ## Requirements ⚙️
 
@@ -30,11 +31,13 @@ Q ce qui aura pour effet de sauvegarder la grille et de fermer le programme
 - You can check if it's installed and see the version by running the following command in your terminal:
     ```bash
     python3 -V
+    ```
+    ```bash
     python -V
     ```
 
 ### 2. Directory Structure 🗂️
-- Ensure your project has a proper directory structure. Based on your code, you should have something like this:
+- Ensure your project has a proper directory structure. You should have something like this:
     ```bash
     Game_of_life/ 
         ├── .gitignore
@@ -50,6 +53,8 @@ Q ce qui aura pour effet de sauvegarder la grille et de fermer le programme
 - To start your game, navigate to the Game_of_life directory and tap:
     ```bash
     python3 main.py
+    ```
+    ```bash 
     python main.py
     ```
 - You should see:
