@@ -49,9 +49,11 @@ def cell_state(grid):
 
     return actual_grid
 
-def scan_history(grid, history, count):
+def scan_history(cycle_start, grid, history, count):
     count += 1
+    cycle_start += 1
     if count >= 2:
         if grid in history:
-            return count, True
-    return count, False
+            cycle_start -= 1
+            return cycle_start, count, True
+    return cycle_start, count, False
