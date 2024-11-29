@@ -44,12 +44,12 @@ Q ce qui aura pour effet de sauvegarder la grille et de fermer le programme
         ├── grid.py
         ├── main.py
         ├── prompt.py
-        ├── README.org
+        ├── README.md
         ├── save.py 
         └── variables.py
     ```
 
-### 3. Run The Application 🚀
+## Run The Application 🚀
 - To start your game, navigate to the Game_of_life directory and tap:
     ```bash
     python3 main.py
