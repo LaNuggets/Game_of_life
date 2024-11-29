@@ -4,14 +4,15 @@ import variables as v
 
 def generate_grid():
 
-    grid_size = input("Enter the grid size or enter 0 to quit: ")
+    grid_size = input("\033[1;34mEnter the grid size: \033[0m")
 
     while not grid_size.isnumeric():
-        grid_size = input("Enter a number to indicate grid size: ")
+        print("\033[1;31mPlease choose a number between 3 and 55\033[0m")
+        grid_size = input("\033[1;34mEnter the grid size: \033[0m")
 
     while int(grid_size) > 55 or int(grid_size) < 3:
-        print("Please choose a number between 3 and 55")
-        grid_size = input("Enter the grid size: ")
+        print("\033[1;31mPlease choose a number between 3 and 55\033[0m")
+        grid_size = input("\033[1;34mEnter the grid size: \033[0m")
         
     components = [0, 1]
     grid = [[random.choice(components) for _ in range(int(grid_size))] for _ in range(int(grid_size))]
