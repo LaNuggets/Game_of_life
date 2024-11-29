@@ -4,7 +4,7 @@ import variables as v
 
 def generate_grid():
 
-    grid_size = input("Enter the grid size: ")
+    grid_size = input("Enter the grid size or enter 0 to quit: ")
 
     while not grid_size.isnumeric():
         grid_size = input("Enter a number to indicate grid size: ")

@@ -5,7 +5,7 @@ import grid as gd
 def menu():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Welcome to the Game of Life !\n")
-    print('This is an auto generate game base on your choices.')
+    print('This is an auto generate game based on your choices.')
 
     while True:
         user_response = input('Load the previous grid, y/n: ')
@@ -19,6 +19,8 @@ def menu():
         elif user_response == 'n':
             grid = gd.generate_grid()
             return grid
+        elif user_response == "q":
+           exit(0)
         else:
             print('Wrong key pressed. Please press "y" or "n"')
 
