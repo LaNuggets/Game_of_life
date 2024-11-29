@@ -8,7 +8,7 @@ def menu():
     print('\033[1;32mThis is an auto generate game.\033[0m\n')
 
     while True:
-        user_response = input('\033[1;34mLoad the previous grid, y/n: \033[0m')
+        user_response = input('\033[1;34mLoad the previous grid, "y" / "n" or "q" to quit: \033[0m')
         if user_response.lower() == 'y':
             try:
                 grid = sv.load_grid()
