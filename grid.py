@@ -5,6 +5,9 @@ def generate_grid():
 
     grid_size = input("Enter the grid size: ")
 
+    while not grid_size.isnumeric():
+        grid_size = input("Enter a number to indicate grid size: ")
+
     while int(grid_size) > 55 or int(grid_size) < 3:
         print("Please choose a number between 3 and 55")
         grid_size = input("Enter the grid size: ")
