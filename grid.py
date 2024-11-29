@@ -21,7 +21,7 @@ def display_grid(grid, living_cell_symbol='⬛', dead_cell_symbol='⬜'):
     os.system('clear')
     for i in grid:
         replace_symbole = [living_cell_symbol if x == 1 else dead_cell_symbol for x in i]
-        print(" ".join(replace_symbole))
+        print("".join(replace_symbole))
 
 frame = [(-1, -1), (-1, 0), (-1, 1),(0, -1), (0, 1),(1, -1), (1, 0), (1, 1)]
 
