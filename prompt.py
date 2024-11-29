@@ -3,13 +3,18 @@ import save as sv
 import grid as gd
 
 def menu():
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("Welcome to the Game of Life !\n")
     print('This is an auto generate game base on your choices.')
+
     while True:
         user_response = input('Load the previous grid, y/n: ')
         if user_response == 'y':
-            grid = sv.load_grid()
+            try:
+                grid = sv.load_grid()
+            except:
+                print("There is no game history! Starting a new game.")
+                grid = gd.generate_grid()
             return grid
         elif user_response == 'n':
             grid = gd.generate_grid()
